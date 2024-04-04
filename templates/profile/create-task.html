@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+    <div class="container" >
+        <div class="offset-md-4 col-md-4">
+            <h2 class="text-dark page-header text-center">Create a Task</h2>
+        </div>
+        <div class="shadow w-50 p-4 mb-4 bg offset-md-3 col-md-4 border border-5  border-dark">
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                {{form | crispy}}
+                <button type="submit" class="center btn btn-success">Task</button>
+            </form>
+        </div>
+    </div>
+  
+{% endblock %}

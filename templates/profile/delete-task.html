@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+{% block content %}
+{% load crispy_forms_tags %}
+    <div class="container" >
+        <div class="offset-md-4 col-md-4">
+            <h2 class="text-dark page-header text-center">elete Task</h2>
+        </div>
+        <div class="container shadow w-50 p-4 mb-4 bg offset-md-3 col-md-4 border border-0.5  border-dark " style="margin-top: 20px; border-radius: 8px; background:#FFFFF0;">
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                <p>Are you want to delete it ?</p>
+
+                <br><br>
+
+                <a href="{% url 'view-tasks' %}">Go Back</a>
+
+                <br><br>
+
+                <button type="submit" class="center btn btn-success">Delete</button>
+            </form>
+        </div>
+    </div>
+  
+{% endblock %}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
